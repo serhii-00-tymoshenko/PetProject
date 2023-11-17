@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PetProject</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chats_mi_title">Chats</string>
+    <string name="feed_mi_title">Feed</string>
+    <string name="search_mi_title">Search</string>
+    <string name="profile_mi_title">Profile</string>
 </resources>
