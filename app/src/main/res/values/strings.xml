@@ -6,4 +6,6 @@
     <string name="feed_mi_title">Feed</string>
     <string name="search_mi_title">Search</string>
     <string name="profile_mi_title">Profile</string>
+    <string name="settings_mi_title">Settings</string>
+    <string name="user_mi_title">User</string>
 </resources>
