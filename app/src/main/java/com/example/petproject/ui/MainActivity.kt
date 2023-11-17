@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.petproject.R
 import com.example.petproject.databinding.ActivityMainBinding
@@ -31,5 +32,11 @@ class MainActivity : AppCompatActivity() {
         } else {
             binding.navigationRail?.setupWithNavController(navController)
         }
+
+        // Setup top app bar
+        val topAppBar = binding.topAppBar
+        val appBarConfiguration = AppBarConfiguration(navController.graph)
+        topAppBar.setupWithNavController(navController, appBarConfiguration)
+
     }
 }
