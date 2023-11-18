@@ -6,8 +6,8 @@ import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import com.example.petproject.R
 import com.example.petproject.databinding.ActivityMainBinding
+import com.example.petproject.ui.utils.getSize
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -21,13 +21,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupNavigation(context: Context) {
-        val displayMetrics = context.resources.displayMetrics
-        val dpWidth: Float = displayMetrics.widthPixels / displayMetrics.density
-
         val navHostFragment = supportFragmentManager.findFragmentById(binding.fragmentContainer.id) as NavHostFragment
         val navController = navHostFragment.navController
 
-        if (dpWidth < 600) {
+        if (getSize(context) < 600) {
             binding.bottomNavigation?.setupWithNavController(navController)
         } else {
             binding.navigationRail?.setupWithNavController(navController)
